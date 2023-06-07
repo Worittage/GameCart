@@ -20,7 +20,11 @@
     },
     "moduleNameMapper": {
       "\\.(css)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "scripts": {
+      "precommit": "npm run lint"
     }
+    
   },
   "author": "",
   "license": "ISC",
@@ -58,5 +62,11 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   }
+  
 }
